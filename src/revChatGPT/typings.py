@@ -27,7 +27,7 @@ class MetaNotAllowInstance(type):
     Metaclass that do not allow classes to be instantiated
     """
 
-    def __call__(cls, *args: Any, **kwargs: Any) -> Any:
+    def __call__(self, *args: Any, **kwargs: Any) -> Any:
         error = ActionNotAllowedError("This class is not allowed to be instantiated")
         raise error
 
